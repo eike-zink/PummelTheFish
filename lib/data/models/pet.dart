@@ -1,6 +1,15 @@
 import 'package:pummel_the_fish/data/models/owner.dart';
 
-enum Species { dog, cat, bird, fish }
+enum Species {
+  dog('Hund'),
+  cat('Katze'),
+  bird('Vogel'),
+  fish('Fisch');
+
+  final String label;
+
+  const Species(this.label);
+}
 
 class Pet {
   final String id;

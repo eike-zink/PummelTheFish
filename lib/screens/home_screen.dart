@@ -36,7 +36,9 @@ class _HomeScreenState extends State<HomeScreen> {
           itemCount: pets.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              leading: const Icon(Icons.pets),
+              leading: Icon(
+                pets[index].isFemale ? Icons.female : Icons.male,
+              ),
               title: Text(pets[index].name),
               subtitle: Text('Alter ${pets[index].age} Jahre'),
               trailing: const Icon(Icons.chevron_right_rounded),

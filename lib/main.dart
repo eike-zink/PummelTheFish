@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pummel_the_fish/screens/create_pet_screen.dart';
+import 'package:pummel_the_fish/screens/home_screen.dart';
 
 void main() async {
   runApp(const MyApp());
@@ -11,10 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Pummel the fish',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: const CreatePetScreen());
+      title: 'Pummel the fish',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: HomeScreen(),
+    );
   }
 }

@@ -58,6 +58,11 @@ class DetailPetScreen extends StatelessWidget {
                     labelText: 'Größe und Gewicht:',
                     infoText: '${pet.height} cm/ ${pet.weight} Gramm',
                   ),
+                  InfoCard(
+                    labelText: 'Geschlecht',
+                    infoText: pet.isFemale ? 'Weiblich' : 'Männlich',
+                  ),
+                  InfoCard(labelText: 'Spezies', infoText: pet.species.label)
                 ],
               ),
             ),
