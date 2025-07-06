@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pummel_the_fish/data/models/pet.dart';
+import 'package:pummel_the_fish/screens/home_screen.dart';
 import 'package:pummel_the_fish/widgets/custom_button.dart';
 
 class CreatePetScreen extends StatefulWidget {
@@ -21,6 +22,7 @@ class _CreatePetScreenState extends State<CreatePetScreen> {
 
   void _savePet() {
     if (_formKey.currentState?.validate() ?? false) {
+      /*
       final pet = Pet(
           id: "test",
           name: currentName!,
@@ -30,6 +32,13 @@ class _CreatePetScreenState extends State<CreatePetScreen> {
           species: currentSepcies!,
           isFemale: currentIsFemale);
       print(pet);
+      */
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => HomeScreen(),
+        ),
+      );
     }
   }
 
@@ -158,7 +167,7 @@ class _CreatePetScreenState extends State<CreatePetScreen> {
                       }
                     },
                   ),
-                  CustomButtpn(label: 'Speichern', onPressed: _savePet),
+                  CustomButton(label: 'Speichern', onPressed: _savePet),
                 ],
               )),
         ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pummel_the_fish/data/models/pet.dart';
 import 'package:pummel_the_fish/data/repositories/fake_pet_repository.dart';
+import 'package:pummel_the_fish/screens/create_pet_screen.dart';
+import 'package:pummel_the_fish/screens/detail_pet_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   final petRepository = FakePetRepository();
@@ -42,13 +44,27 @@ class _HomeScreenState extends State<HomeScreen> {
               title: Text(pets[index].name),
               subtitle: Text('Alter ${pets[index].age} Jahre'),
               trailing: const Icon(Icons.chevron_right_rounded),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => DetailPetScreen(pet: pets[index]),
+                  ),
+                );
+              },
             );
           },
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => const CreatePetScreen(),
+            ),
+          );
+        },
         child: const Icon(Icons.add),
       ),
     );

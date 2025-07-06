@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pummel_the_fish/screens/home_screen.dart';
+import 'package:pummel_the_fish/screens/splash_screen.dart';
 
 void main() async {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: const SplashScreen(),
     );
   }
 }

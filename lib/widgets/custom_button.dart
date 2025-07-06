@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class CustomButtpn extends StatelessWidget {
+class CustomButton extends StatelessWidget {
   final String label;
   final Function onPressed;
 
-  const CustomButtpn({super.key, required this.label, required this.onPressed});
+  const CustomButton({super.key, required this.label, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => onPressed,
+      onTap: () => onPressed(),
       child: Container(
         width: 160,
         height: 50,
