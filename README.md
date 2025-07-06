@@ -1,2 +1,2 @@
 # Pummel the Fish
-Beispielprogramm auf dem Buch App-Entwicklung mit Futter für Dummies
+Beispielprogramm auf dem Buch App-Entwicklung mit Flutter für Dummies
