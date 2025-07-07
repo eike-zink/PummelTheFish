@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pummel_the_fish/data/models/pet.dart';
-import 'package:pummel_the_fish/screens/home_screen.dart';
 import 'package:pummel_the_fish/widgets/custom_button.dart';
 
 class CreatePetScreen extends StatefulWidget {
@@ -31,14 +30,8 @@ class _CreatePetScreenState extends State<CreatePetScreen> {
           weight: currentWeight!,
           species: currentSepcies!,
           isFemale: currentIsFemale);
-      print(pet);
       */
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (_) => HomeScreen(),
-        ),
-      );
+      Navigator.pushReplacementNamed(context, '/home');
     }
   }
 

@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:pummel_the_fish/data/models/pet.dart';
 
 class DetailPetScreen extends StatelessWidget {
-  final Pet pet;
+  //final Pet pet;
 
-  const DetailPetScreen({super.key, required this.pet});
+  //const DetailPetScreen({super.key, required this.pet});
+  const DetailPetScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final Pet pet = ModalRoute.of(context)!.settings.arguments as Pet;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(pet.name),
